@@ -1,0 +1,12 @@
+#!/bin/bash
+
+docker info
+service docker start
+cd /root/lair/
+docker-compose up -d
+timeout 20
+docker-compose start
+xdg-open https://lair.localhost > /dev/null 2>&1
+
+clear 
+
